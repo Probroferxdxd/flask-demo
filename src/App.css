@@ -399,15 +399,6 @@
   .seccion-pantalla-principal
   .secciones
   .seccion-ejercicios-formulas
-  * {
-  
-}
-
-.container
-  main
-  .seccion-pantalla-principal
-  .secciones
-  .seccion-ejercicios-formulas
   p:hover {
   font-weight: bold;
   transition: 0.5s;
