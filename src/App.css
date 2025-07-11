@@ -1,38 +1,429 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luxurious+Roman&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #1b1725;
+  padding: 30px;
+}
+
+.container nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  font-size: 1.1rem;
+}
+
+.container nav .seccion-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.container nav .seccion-menu a {
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 5px 10px;
+  border-radius: 7.5px;
+}
+
+.container nav .seccion-menu a.activo {
+  color: #1b1725;
+  background-color: #fff;
+}
+
+.container main {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.container main .page {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s ease;
+}
+
+.container main .page.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container main .seccion-inicio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container main .seccion-inicio .seccion-presentacion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+  height: 100vh;
+}
+
+.container main .seccion-inicio .seccion-presentacion h1 {
+  font-size: 5rem;
+}
+
+.container main .seccion-inicio .seccion-presentacion p {
+  width: 50%;
+  font-size: 1.3rem;
+  text-align: left;
+}
+.container main .seccion-inicio .seccion-cursos {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  padding: 0 60px;
+}
+
+.container main .seccion-inicio .seccion-cursos .curso {
+  width: 30%;
+  background-color: #040305;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.container main .seccion-inicio .seccion-cursos .curso header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container main .seccion-inicio .seccion-cursos .curso section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container main .seccion-inicio .seccion-cursos .curso img {
+  width: 25px;
+}
+
+.container main .seccion-inicio .seccion-cursos .curso ul {
+  list-style: none;
+}
+
+.container main .seccion-inicio .seccion-cursos .curso section a {
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 5px 10px;
+  border-radius: 7.5px;
+  background: #1b1725;
+  color: #fff;
+  width: 50%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Contenedor Botones */
+
+.seccion-botones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.seccion-botones .botones {
+  padding: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.seccion-botones .botones.incorrecto.activo {
+  background-color: red;
+  transition: 0.5s;
+}
+
+.seccion-botones .botones.correcto.activo {
+  background-color: green;
+  transition: 0.5s;
+}
+
+/* Contenedor Quiz */
+
+.dragdrop-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.dragdrop-opciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dragdrop-opcion {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.dragdrop-opcion:hover {
+  background-color: #e0e0e0;
+}
+
+.dragdrop-opcion.seleccionada {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #357ab8;
+}
+
+.dragdrop-zona-respuesta {
+  min-height: 50px;
+  min-width: 200px;
+  background-color: #fafafa;
+  border: 2px dashed #bbb;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 12px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.dragdrop-zona-respuesta.correcto {
+  border-color: #4caf50;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.dragdrop-zona-respuesta.incorrecto {
+  border-color: #e53935;
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+/* Contenedor Identificando Palabra */
+
+.quiz-identificar-contenedor {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.quiz-identificar-texto {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.quiz-palabra {
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.quiz-palabra:hover {
+  background-color: #eee;
+}
+
+.quiz-palabra.correcto {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.quiz-palabra.incorrecto {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+.quiz-resultado {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.quiz-resultado.correcto {
+  color: #2e7d32;
+}
+
+.quiz-resultado.incorrecto {
+  color: #c62828;
+}
+
+
+/* Cursos */
+
+.container main .contenedor-aritmetica, .container main .contenedor-algebra  {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  flex: 1;
+
+  /*Por ahora*/
+
+  height: 79.6vh;
+}
+
+/* Interfaz ejercicios */
+
+.container main .seccion-pantalla-de-ejercicios {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container main .seccion-barra-de-progreso {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container
+  main
+  .seccion-barra-de-progreso
+  .parte-barra-de-progreso {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container
+  main
+  .seccion-barra-de-progreso
+  .seccion-x
+  span {
+  cursor: pointer;
+}
+
+.container main .seccion-pantalla-principal {
+  width: 85%;
+  height: 70vh;
+  position: relative;
+  padding: 20px;
+  /* background-color: red; */
+}
+
+.container main .seccion-pantalla-principal footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.container
+  main
+  .seccion-pantalla-principal
+  footer
+  button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: transparent;
+  border: solid 2px #fff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  animation: animacion-predeterminada 1s ease;
+}
+
+.container
+  main
+  .seccion-pantalla-principal
+  footer
+  button:hover {
+  background-color: #fff;
+  color: #1b1752;
+}
+
+.container main .seccion-pantalla-principal .secciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1.3rem;
+  line-height: 50px;
+  gap: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.container
+  main
+  .seccion-pantalla-principal
+  .secciones
+  img {
+  object-fit: cover;
+  opacity: 0;
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  animation: animacion-predeterminada 2s ease 1s forwards;
+}
+
+.container
+  main
+  .seccion-pantalla-principal
+  .secciones
+  .seccion-ejercicios-formulas
+  * {
+  
+}
+
+.container
+  main
+  .seccion-pantalla-principal
+  .secciones
+  .seccion-ejercicios-formulas
+  p:hover {
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* Animaciones  */
+
+@keyframes animacion-predeterminada {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
