@@ -160,70 +160,66 @@
   transition: 0.5s;
 }
 
-/* Contenedor Quiz */
+/* Contenedor Drag Drop */
 
-.dragdrop-contenedor {
+.dragdrop-texto-container {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   align-items: center;
-  gap: 16px;
-  margin: 20px auto;
-  max-width: 400px;
+  text-align: center;
 }
 
-.dragdrop-opciones {
+.texto-completar {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.dropzone-en-texto {
+  display: inline-block;
+  min-width: 50px;
+  padding: 0.1rem 0.3rem;
+  margin: 0 0.2rem;
+  border-bottom: 2px dashed #888;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropzone-en-texto.ocupado {
+  background-color: #d1e7dd;
+  border-bottom: 2px solid transparent;
+}
+
+.dropzone-en-texto.correcta{
+  background-color: #c8e6c9;
+  border-bottom: 2px solid #2e7d32;
+}
+
+.dropzone-en-texto.incorrecta {
+  background-color: #ffcdd2;
+  border-bottom: 2px solid #c62828;
+}
+
+.opciones {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
-.dragdrop-opcion {
-  background-color: #f0f0f0;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 12px 20px;
-  font-size: 16px;
+.opcion {
+  padding: 0.4rem 0.8rem;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 6px;
   cursor: pointer;
   user-select: none;
-  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.dragdrop-opcion:hover {
-  background-color: #e0e0e0;
+.opcion.seleccionada {
+  background-color: #084298;
 }
 
-.dragdrop-opcion.seleccionada {
-  background-color: #4a90e2;
-  color: white;
-  border-color: #357ab8;
-}
 
-.dragdrop-zona-respuesta {
-  min-height: 50px;
-  min-width: 200px;
-  background-color: #fafafa;
-  border: 2px dashed #bbb;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  padding: 12px;
-  transition: border-color 0.3s, background-color 0.3s;
-}
-
-.dragdrop-zona-respuesta.correcto {
-  border-color: #4caf50;
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-.dragdrop-zona-respuesta.incorrecto {
-  border-color: #e53935;
-  background-color: #ffebee;
-  color: #b71c1c;
-}
 
 /* Contenedor Identificando Palabra */
 
