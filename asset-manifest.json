@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Probroferxdxd/flask-demo/static/css/main.93b0df85.css",
-    "main.js": "/Probroferxdxd/flask-demo/static/js/main.19357ff1.js",
+    "main.css": "/Probroferxdxd/flask-demo/static/css/main.2f9246c3.css",
+    "main.js": "/Probroferxdxd/flask-demo/static/js/main.92426955.js",
     "static/media/trigonometria.png": "/Probroferxdxd/flask-demo/static/media/trigonometria.1262f74326b80340a12c.png",
     "static/media/geometria.png": "/Probroferxdxd/flask-demo/static/media/geometria.5e6a6636420cea01119f.png",
     "static/media/algebra.png": "/Probroferxdxd/flask-demo/static/media/algebra.5d69046e77734c477eea.png",
@@ -9,11 +9,11 @@
     "static/media/aritmetica.png": "/Probroferxdxd/flask-demo/static/media/aritmetica.5a5b73decd421e332781.png",
     "static/media/quiosco.png": "/Probroferxdxd/flask-demo/static/media/quiosco.d1165ad13e416a1b7ca5.png",
     "index.html": "/Probroferxdxd/flask-demo/index.html",
-    "main.93b0df85.css.map": "/Probroferxdxd/flask-demo/static/css/main.93b0df85.css.map",
-    "main.19357ff1.js.map": "/Probroferxdxd/flask-demo/static/js/main.19357ff1.js.map"
+    "main.2f9246c3.css.map": "/Probroferxdxd/flask-demo/static/css/main.2f9246c3.css.map",
+    "main.92426955.js.map": "/Probroferxdxd/flask-demo/static/js/main.92426955.js.map"
   },
   "entrypoints": [
-    "static/css/main.93b0df85.css",
-    "static/js/main.19357ff1.js"
+    "static/css/main.2f9246c3.css",
+    "static/js/main.92426955.js"
   ]
 }
