@@ -1,5 +1,15 @@
+import EjerciciosTrigonometria from "./ejercicios-trigonometria/componente-1-trigonometria";
+import PantallaDeEjercicios from "./componentes-principales";
+
 function Trigonometria() {
-  return <h1>Contenido de Trigo</h1>;
+  return (
+    <div className="contenedor-trigonometria">
+      <PantallaDeEjercicios
+        EjerciciosComponent={EjerciciosTrigonometria}
+        seccionesConValidacion={[]}
+      />
+    </div>
+  );
 }
 
-export default Trigonometria
+export default Trigonometria;

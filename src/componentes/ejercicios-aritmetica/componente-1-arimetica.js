@@ -175,11 +175,8 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
           <li>50 caramelos (25$)</li>
         </ul>
         <ContenedorBotones
-          opcion1="90$"
-          opcion2="75$"
-          opcion3="70$"
-          opcion4="60$"
-          opcionCorrecta={3}
+          opciones={["90$", "75$", "70$", "60$"]}
+          correcta={2}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
@@ -235,16 +232,13 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
           nuestra tasa de interés es 10% semanal y el tiempo es 3 semanas
         </p>
         <ContenedorBotones
-          opcion1="21$"
-          opcion2="7$"
-          opcion3="30$"
-          opcion4="70$"
-          opcionCorrecta={1}
+          opciones={["21$", "7$", "30$", "70$"]}
+          correcta={0}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
     ),
-    10: (
+   10: (
       <div className="secciones">
         <p>
           Excelente, el interés hallado es la cantidad que cobraremos a nuestro
@@ -260,11 +254,8 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
           ejercicio es 21$
         </p>
         <ContenedorBotones
-          opcion1="81$"
-          opcion2="91$"
-          opcion3="76$"
-          opcion4="70$"
-          opcionCorrecta={2}
+          opciones={["81$", "91$", "76$", "70$"]}
+          correcta={1}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
@@ -285,11 +276,8 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
           tasa de interés es del 8% anual durante 3 años?
         </p>
         <ContenedorBotones
-          opcion1="100$"
-          opcion2="160$"
-          opcion3="320$"
-          opcion4="480$"
-          opcionCorrecta={3}
+          opciones={["100$", "160$", "320$", "480$"]}
+          correcta={3}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
@@ -321,11 +309,8 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
           de este periodo
         </p>
         <ContenedorBotones
-          opcion1="16 800$"
-          opcion2="4800$"
-          opcion3="1200$"
-          opcion4="1080$"
-          opcionCorrecta={1}
+          opciones={["16 800$", "4800$", "1200$", "1080$"]}
+          correcta={0}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
@@ -350,7 +335,7 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
         </ul>
       </div>
     ),
-    16: (
+     16: (
       <div className="secciones">
         <h2>Dato</h2>
         <p>
@@ -358,11 +343,8 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
         </p>
         <p>Monto = Interés + Capital</p>
         <ContenedorBotones
-          opcion1="3000$"
-          opcion2="4000$"
-          opcion3="500$"
-          opcion4="5000$"
-          opcionCorrecta={4}
+          opciones={["3000$", "4000$", "500$", "5000$"]}
+          correcta={3}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
@@ -378,11 +360,8 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
           <p>I = C x r% x t</p>
         </div>
         <ContenedorBotones
-          opcion1="4 años"
-          opcion2="6 años"
-          opcion3="3 años"
-          opcion4="5 años"
-          opcionCorrecta={1}
+          opciones={["4 años", "6 años", "3 años", "5 años"]}
+          correcta={0}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
@@ -399,11 +378,8 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
           periodo es anual
         </p>
         <ContenedorBotones
-          opcion1="$1305"
-          opcion2="$1035"
-          opcion3="$1350"
-          opcion4="$1530"
-          opcionCorrecta={1}
+          opciones={["$1305", "$1035", "$1350", "$1530"]}
+          correcta={2}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
@@ -416,25 +392,19 @@ const EjerciciosAritmetica = ({ seccion, setDeshabilitadoPrincipal }) => {
           tasa del 4% mensual durante cinco bimestres
         </p>
         <ContenedorBotones
-          opcion1="$840"
-          opcion2="$804"
-          opcion3="$408"
-          opcion4="$480"
-          opcionCorrecta={4}
+          opciones={["$840", "$804", "$408", "$480"]}
+          correcta={3}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
     ),
-    20: (
+     20: (
       <div className="secciones">
         <h2>Caso 5</h2>
         <p>Jéniffer deposita $20 000 en una entidad financiera durante 3 años a una tasa del 12,5% semestral. Calcula el tiempo</p>
         <ContenedorBotones
-          opcion1="$15 000"
-          opcion2="$30 000"
-          opcion3="$7500"
-          opcion4="$44 000"
-          opcionCorrecta={1}
+          opciones={["$15 000", "$30 000", "$7500", "$44 000"]}
+          correcta={0}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>

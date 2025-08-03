@@ -1,43 +1,39 @@
 import { useState } from "react";
 
 const ContenedorBotones = ({
-  opcion1,
-  opcion2,
-  opcion3,
-  opcion4,
-  opcionCorrecta,
+  opciones = [],
+  correcta,
   setDeshabilitadoPrincipal,
 }) => {
   const [botonActivo, setBotonActivo] = useState(null);
 
-  const arrayDeBotones = [
-    { texto: opcion1, indice: 1 },
-    { texto: opcion2, indice: 2 },
-    { texto: opcion3, indice: 3 },
-    { texto: opcion4, indice: 4 },
-  ];
-
+  // Si se usa 'opciones' (array), se ignoran opcion1, opcion2, etc.
+  // correcta puede ser el índice (número) o el valor (string/elemento)
   return (
     <div className="seccion-botones">
-      {arrayDeBotones.map((element) => (
+      {opciones.map((texto, idx) => (
         <button
-          key={element.indice}
-          // disabled={botonActivo !== null}
+          key={idx}
           className={`botones ${
-            botonActivo
-              ? element.indice === opcionCorrecta
+            botonActivo !== null
+              ? (typeof correcta === "number"
+                  ? idx === correcta
+                  : texto === correcta)
                 ? "correcto"
                 : "incorrecto"
               : ""
-          } ${botonActivo === element.indice ? "activo" : ""}`}
+          } ${botonActivo === idx ? "activo" : ""}`}
           onClick={() => {
-            setBotonActivo(element.indice);
-            if (element.indice === opcionCorrecta) {
+            setBotonActivo(idx);
+            if (
+              (typeof correcta === "number" && idx === correcta) ||
+              (texto === correcta)
+            ) {
               setDeshabilitadoPrincipal(false);
             }
           }}
         >
-          {element.texto}
+          {texto}
         </button>
       ))}
     </div>

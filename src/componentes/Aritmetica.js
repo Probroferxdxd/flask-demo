@@ -1,6 +1,5 @@
 import EjerciciosAritmetica from "./ejercicios-aritmetica/componente-1-arimetica";
 import PantallaDeEjercicios from "./componentes-principales";
-import "./aritmetica.css"; // Importar el CSS específico para Aritmética
 
 function Aritmetica() {
   return (

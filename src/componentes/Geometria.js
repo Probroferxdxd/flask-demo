@@ -1,5 +1,15 @@
+import EjerciciosGeometria from "./ejercicios-geometria/componente-1-geometria";
+import PantallaDeEjercicios from "./componentes-principales";
+
 function Geometria() {
-  return <h1>Contenido de Geo</h1>;
+  return (
+    <div className="contenedor-geometria">
+      <PantallaDeEjercicios
+        EjerciciosComponent={EjerciciosGeometria}
+        seccionesConValidacion={[]}
+      />
+    </div>
+  );
 }
 
-export default Geometria
+export default Geometria;

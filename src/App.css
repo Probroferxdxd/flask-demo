@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');* {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: #fff;
+}
+
+body {
+  background: #181628;
 }
 
 .container {
@@ -44,7 +49,6 @@
   display: flex;
   width: 100%;
   flex: 1;
-  overflow: hidden;
 }
 
 .container main .page {
@@ -135,28 +139,42 @@
 /* Contenedor Botones */
 
 .seccion-botones {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
   width: 100%;
+  margin-top: 24px;
 }
 
 .seccion-botones .botones {
-  padding: 30px;
-  border-radius: 20px;
+  padding: 24px;
+  border-radius: 16px;
   cursor: pointer;
-  background-color: transparent;
-  border: solid 2px #fff;
+  background-color: #23203a;
+  border: 2px solid #4f8cff;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.seccion-botones .botones:hover {
+  background-color: #4f8cff;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 .seccion-botones .botones.incorrecto.activo {
-  background-color: red;
-  transition: 0.5s;
+  background-color: #c62828;
+  color: #fff;
+  border: 2px solid #c62828;
 }
 
 .seccion-botones .botones.correcto.activo {
-  background-color: green;
-  transition: 0.5s;
+  background-color: #2e7d32;
+  color: #fff;
+  border: 2px solid #2e7d32;
 }
 
 /* Contenedor Drag Drop */
@@ -189,7 +207,7 @@
   border-bottom: 2px solid transparent;
 }
 
-.dropzone-en-texto.correcta{
+.dropzone-en-texto.correcta {
   background-color: #c8e6c9;
   border-bottom: 2px solid #2e7d32;
 }
@@ -217,8 +235,6 @@
 .opcion.seleccionada {
   background-color: #084298;
 }
-
-
 
 /* Contenedor Identificando Palabra */
 
@@ -268,19 +284,72 @@
   color: #c62828;
 }
 
+/* Estilos para el lienzo geométrico */
+
+.quiz-geometria-contenedor {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.quiz-texto {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.quiz-lienzo {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+}
+
+.quiz-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quiz-boton {
+  padding: 1rem 2rem;
+  background-color: #23203a;
+  border: 2px solid #4f8cff;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.quiz-boton:hover {
+  background-color: #4f8cff;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+
 
 /* Cursos */
 
-.container main .contenedor-aritmetica, .container main .contenedor-algebra  {
+.container main .contenedor-aritmetica,
+.container main .contenedor-algebra,
+.container main .contenedor-geometria,
+.container main .contenedor-trigonometria {
+  background: #23203a;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.15);
+  padding: 32px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   flex: 1;
-
-  /*Por ahora*/
-
   height: 79.6vh;
 }
 
@@ -304,21 +373,14 @@
   gap: 10px;
 }
 
-.container
-  main
-  .seccion-barra-de-progreso
-  .parte-barra-de-progreso {
+.container main .seccion-barra-de-progreso .parte-barra-de-progreso {
   width: 80%;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.container
-  main
-  .seccion-barra-de-progreso
-  .seccion-x
-  span {
+.container main .seccion-barra-de-progreso .seccion-x span {
   cursor: pointer;
 }
 
@@ -339,28 +401,21 @@
   gap: 20px;
 }
 
-.container
-  main
-  .seccion-pantalla-principal
-  footer
-  button {
-  padding: 10px 20px;
+.container main .seccion-pantalla-principal footer button {
+  padding: 10px 24px;
   border-radius: 10px;
-  background: transparent;
-  border: solid 2px #fff;
+  background: #4f8cff;
+  border: none;
   color: #fff;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.5s;
-  animation: animacion-predeterminada 1s ease;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 2px 8px 0 rgba(79,140,255,0.10);
 }
 
-.container
-  main
-  .seccion-pantalla-principal
-  footer
-  button:hover {
+.container main .seccion-pantalla-principal footer button:hover {
   background-color: #fff;
-  color: #1b1752;
+  color: #4f8cff;
 }
 
 .container main .seccion-pantalla-principal .secciones {
@@ -375,11 +430,7 @@
   position: relative;
 }
 
-.container
-  main
-  .seccion-pantalla-principal
-  .secciones
-  img {
+.container main .seccion-pantalla-principal .secciones img {
   object-fit: cover;
   opacity: 0;
   width: 300px;
@@ -411,5 +462,151 @@
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+/* Responsive Design para dispositivos móviles */
+@media (max-width: 900px) {
+  .container main .seccion-inicio .seccion-cursos {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .container main .seccion-inicio .seccion-cursos .curso {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    padding: 10px;
+  }
+  .container nav {
+    flex-direction: column;
+    padding: 10px 0;
+    font-size: 1rem;
+    gap: 10px;
+  }
+  .container nav .seccion-menu {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .container main {
+    flex-direction: column;
+    padding: 0;
+  }
+  .container main .seccion-inicio .seccion-presentacion {
+    padding: 20px 5px;
+    gap: 20px;
+    height: auto;
+  }
+  .container main .seccion-inicio .seccion-presentacion h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .container main .seccion-inicio .seccion-presentacion p {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .container main .seccion-inicio .seccion-cursos {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 2px;
+  }
+  .container main .seccion-inicio .seccion-cursos .curso {
+    width: 100%;
+    padding: 15px;
+    gap: 10px;
+  }
+  .container main .seccion-inicio .seccion-cursos .curso section a {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+  .container main .contenedor-aritmetica,
+  .container main .contenedor-algebra,
+  .container main .contenedor-geometria,
+  .container main .contenedor-trigonometria {
+    padding: 10px 0;
+    border-radius: 8px;
+    height: auto;
+    min-height: 60vh;
+  }
+  .container main .seccion-pantalla-principal {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  .container main .seccion-pantalla-principal footer {
+    flex-direction: column;
+    gap: 10px;
+    position: static;
+    margin-top: 20px;
+  }
+  .container main .seccion-pantalla-principal .secciones {
+    font-size: 1rem;
+    line-height: 1.5;
+    gap: 10px;
+  }
+  .container main .seccion-pantalla-principal .secciones img {
+    width: 100%;
+    padding: 10px;
+  }
+  .quiz-geometria-contenedor {
+    padding: 0.5rem;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  .quiz-texto {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .quiz-lienzo {
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+  }
+  .quiz-opciones {
+    gap: 0.3rem;
+  }
+  .quiz-boton {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+  .seccion-botones {
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .seccion-botones .botones {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .dragdrop-texto-container {
+    gap: 0.5rem;
+  }
+  .texto-completar {
+    font-size: 1rem;
+  }
+  .quiz-identificar-contenedor {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+  .quiz-identificar-texto {
+    font-size: 1rem;
+  }
+  .quiz-palabra {
+    padding: 1px 2px;
+    font-size: 1rem;
+  }
+  .quiz-resultado {
+    font-size: 1rem;
+    margin-top: 6px;
   }
 }
