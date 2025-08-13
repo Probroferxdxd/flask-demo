@@ -5,8 +5,14 @@ function Geometria() {
   return (
     <div className="contenedor-geometria">
       <PantallaDeEjercicios
-        EjerciciosComponent={EjerciciosGeometria}
+        EjerciciosComponent={({ seccion, setDeshabilitadoPrincipal }) => (
+          <EjerciciosGeometria
+            seccion={seccion}
+            setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
+          />
+        )}
         seccionesConValidacion={[]}
+        totalSecciones={17} // <-- pásalo aquí
       />
     </div>
   );

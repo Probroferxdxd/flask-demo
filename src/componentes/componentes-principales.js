@@ -5,6 +5,7 @@ import "../App.css";
 const PantallaDeEjercicios = ({
   EjerciciosComponent,
   seccionesConValidacion,
+  totalSecciones
 }) => {
   const [sectionNumber, setSectionNumber] = useState(0);
   const [deshabilitadoPrincilpal, setDeshabilitadoPrincipal] = useState(true);
@@ -12,7 +13,7 @@ const PantallaDeEjercicios = ({
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTextoBoton(sectionNumber === 20 ? "Finish" : "Next");
+    setTextoBoton(sectionNumber === totalSecciones ? "Finish" : "Next");
   }, [sectionNumber]);
 
   return (
@@ -31,7 +32,7 @@ const PantallaDeEjercicios = ({
             <div
               className="barra-de-progreso"
               style={{
-                width: `${sectionNumber * 5}%`,
+                width: `${sectionNumber/totalSecciones * 100}%`,
                 backgroundColor: "#ddd",
                 height: "100%",
                 borderRadius: "20px",
@@ -64,7 +65,7 @@ const PantallaDeEjercicios = ({
           )}
           <button
             onClick={() => {
-              if (sectionNumber < 20) {
+              if (sectionNumber < totalSecciones) {
                 setSectionNumber(sectionNumber + 1);
                 setDeshabilitadoPrincipal(
                   seccionesConValidacion.includes(sectionNumber + 1)

@@ -16,7 +16,6 @@ body {
   flex-direction: column;
   width: 100%;
   height: auto;
-  background-color: #1b1725;
   padding: 30px;
 }
 
@@ -287,13 +286,11 @@ body {
 /* Estilos para el lienzo geométrico */
 
 .quiz-geometria-contenedor {
-  background-color: #ffffff;
   padding: 1rem;
   border-radius: 16px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: auto;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .quiz-texto {
@@ -325,6 +322,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: background 0.3s, color 0.3s, border 0.3s;
+  margin-bottom: 0.5rem;
 }
 
 .quiz-boton:hover {
@@ -332,6 +330,25 @@ body {
   color: #fff;
   border: 2px solid #fff;
 }
+
+.quiz-boton:hover:not(:disabled) {
+  background-color: #4f8cff;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.quiz-boton.correcto.activo {
+  background-color: #2e7d32;
+  color: #fff;
+  border: 2px solid #2e7d32;
+}
+
+.quiz-boton.incorrecto.activo {
+  background-color: #c62828;
+  color: #fff;
+  border: 2px solid #c62828;
+}
+
 
 
 
@@ -341,9 +358,7 @@ body {
 .container main .contenedor-algebra,
 .container main .contenedor-geometria,
 .container main .contenedor-trigonometria {
-  background: #23203a;
   border-radius: 16px;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.15);
   padding: 32px 0;
   width: 100%;
   display: flex;
@@ -385,49 +400,38 @@ body {
 }
 
 .container main .seccion-pantalla-principal {
+  border-radius: 16px;
   width: 85%;
-  height: 70vh;
+  min-height: 70vh;
   position: relative;
   padding: 20px;
-  /* background-color: red; */
+  margin: 0 auto 32px auto;
 }
 
 .container main .seccion-pantalla-principal footer {
   width: 100%;
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+  flex-direction: row;
+  position: static; /* Cambiado de absolute a static */
+  margin-bottom: 20px;
 }
-
 .container main .seccion-pantalla-principal footer button {
   padding: 10px 24px;
   border-radius: 10px;
-  background: #4f8cff;
   border: none;
-  color: #fff;
+  background-color: #fff;
+  color: #4f8cff;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-  box-shadow: 0 2px 8px 0 rgba(79,140,255,0.10);
+  box-shadow: 0 2px 8px 0 rgba(79, 140, 255, 0.1);
 }
 
 .container main .seccion-pantalla-principal footer button:hover {
-  background-color: #fff;
-  color: #4f8cff;
-}
-
-.container main .seccion-pantalla-principal .secciones {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  font-size: 1.3rem;
-  line-height: 50px;
-  gap: 20px;
-  text-align: center;
-  position: relative;
+  background: #4f8cff;
+  color: #fff;
 }
 
 .container main .seccion-pantalla-principal .secciones img {
@@ -440,12 +444,7 @@ body {
   animation: animacion-predeterminada 2s ease 1s forwards;
 }
 
-.container
-  main
-  .seccion-pantalla-principal
-  .secciones
-  .seccion-ejercicios-formulas
-  p:hover {
+.seccion-ejercicios-formulas p:hover {
   font-weight: bold;
   transition: 0.5s;
   cursor: pointer;
@@ -608,5 +607,89 @@ body {
   .quiz-resultado {
     font-size: 1rem;
     margin-top: 6px;
+  }
+}
+
+/* Clase Secciones */
+
+.secciones {
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Textos dentro de .secciones */
+.secciones h1,
+.secciones h2,
+.secciones h3,
+.secciones h4,
+.secciones h5,
+.secciones h6 {
+  color: #4f8cff;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  line-height: 1.2;
+}
+
+.secciones p,
+.secciones li,
+.secciones span,
+.secciones label {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.secciones b,
+.secciones strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Imágenes dentro de .secciones */
+.secciones img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 24px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+  background: #23203a;
+  padding: 8px;
+  object-fit: contain;
+}
+
+/* Listas dentro de .secciones */
+.secciones ul,
+.secciones ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.secciones li {
+  margin-bottom: 0.5em;
+}
+
+/* Responsive para textos e imágenes en .secciones */
+@media (max-width: 600px) {
+  .secciones h1 {
+    font-size: 1.7rem;
+  }
+  .secciones h2 {
+    font-size: 1.3rem;
+  }
+  .secciones h3 {
+    font-size: 1.1rem;
+  }
+  .secciones p,
+  .secciones li,
+  .secciones span,
+  .secciones label {
+    font-size: 1rem;
+  }
+  .secciones img {
+    border-radius: 8px;
+    padding: 4px;
   }
 }
