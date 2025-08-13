@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/flask-demo/static/css/main.fa9ac18e.css",
-    "main.js": "/flask-demo/static/js/main.3787b511.js",
+    "main.css": "/flask-demo/static/css/main.8476a900.css",
+    "main.js": "/flask-demo/static/js/main.566fabb2.js",
     "static/media/trigonometria.png": "/flask-demo/static/media/trigonometria.1262f74326b80340a12c.png",
     "static/media/geometria.png": "/flask-demo/static/media/geometria.5e6a6636420cea01119f.png",
     "static/media/algebra.png": "/flask-demo/static/media/algebra.5d69046e77734c477eea.png",
@@ -9,11 +9,11 @@
     "static/media/aritmetica.png": "/flask-demo/static/media/aritmetica.5a5b73decd421e332781.png",
     "static/media/quiosco.png": "/flask-demo/static/media/quiosco.d1165ad13e416a1b7ca5.png",
     "index.html": "/flask-demo/index.html",
-    "main.fa9ac18e.css.map": "/flask-demo/static/css/main.fa9ac18e.css.map",
-    "main.3787b511.js.map": "/flask-demo/static/js/main.3787b511.js.map"
+    "main.8476a900.css.map": "/flask-demo/static/css/main.8476a900.css.map",
+    "main.566fabb2.js.map": "/flask-demo/static/js/main.566fabb2.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa9ac18e.css",
-    "static/js/main.3787b511.js"
+    "static/css/main.8476a900.css",
+    "static/js/main.566fabb2.js"
   ]
 }
