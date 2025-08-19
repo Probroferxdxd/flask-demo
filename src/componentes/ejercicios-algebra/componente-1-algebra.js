@@ -142,9 +142,10 @@ const EjerciciosAlgebra = ({ seccion, setDeshabilitadoPrincipal }) => {
           "Entonces, si nosotros vendemos un total de 37 queques, ¿Cuánto será
           nuestra ganancia?"
         </p>
-        <ContenedorBotones
+        <p>P(x) = 10x - 77</p>
+         <ContenedorBotones
           opciones={["278$", "293$", "370$", "300$"]}
-          opcionCorrecta={2}
+          correcta={1}
           setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
         />
       </div>
@@ -531,17 +532,14 @@ const EjerciciosAlgebra = ({ seccion, setDeshabilitadoPrincipal }) => {
           <IdentificarPalabra
             texto="2x³ + 3x² - 2"
             palabraClave={"2x³"}
-            setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
           />
           <IdentificarPalabra
             texto=" -7x + x⁵  + 4x³ + 4"
             palabraClave={"x⁵"}
-            setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
           />
           <IdentificarPalabra
             texto="7x³ - 12"
             palabraClave={"7x³"}
-            setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
           />
           <IdentificarPalabra
             texto="6x + 3x³ - 8 + 2x⁵"

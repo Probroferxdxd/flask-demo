@@ -6,7 +6,7 @@ function Aritmetica() {
     <div className="contenedor-aritmetica">
       <PantallaDeEjercicios
         EjerciciosComponent={EjerciciosAritmetica}
-        seccionesConValidacion={[6, 9, 10, 12, 14]}
+        seccionesConValidacion={[6, 9, 10, 12, 14, 16, 17, 18, 19, 20]}
         totalSecciones={20}
       />
     </div>

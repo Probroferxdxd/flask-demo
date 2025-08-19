@@ -11,7 +11,7 @@ function Geometria() {
             setDeshabilitadoPrincipal={setDeshabilitadoPrincipal}
           />
         )}
-        seccionesConValidacion={[]}
+        seccionesConValidacion={[6, 7, 14, 15, 16, 17]}
         totalSecciones={17} // <-- pásalo aquí
       />
     </div>

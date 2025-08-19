@@ -7,7 +7,7 @@ function Algebra() {
     <div className="contenedor-algebra">
       <PantallaDeEjercicios
         EjerciciosComponent={EjerciciosAlgebra}
-        seccionesConValidacion={[]}
+        seccionesConValidacion={[6, 9, 10, 12, 14, 19, 20]}
         totalSecciones={20}
       />
     </div>
