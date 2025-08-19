@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/flask-demo/static/css/main.8476a900.css",
-    "main.js": "/flask-demo/static/js/main.566fabb2.js",
+    "main.js": "/flask-demo/static/js/main.20c4f2f5.js",
     "static/media/trigonometria.png": "/flask-demo/static/media/trigonometria.1262f74326b80340a12c.png",
     "static/media/geometria.png": "/flask-demo/static/media/geometria.5e6a6636420cea01119f.png",
     "static/media/algebra.png": "/flask-demo/static/media/algebra.5d69046e77734c477eea.png",
@@ -10,10 +10,10 @@
     "static/media/quiosco.png": "/flask-demo/static/media/quiosco.d1165ad13e416a1b7ca5.png",
     "index.html": "/flask-demo/index.html",
     "main.8476a900.css.map": "/flask-demo/static/css/main.8476a900.css.map",
-    "main.566fabb2.js.map": "/flask-demo/static/js/main.566fabb2.js.map"
+    "main.20c4f2f5.js.map": "/flask-demo/static/js/main.20c4f2f5.js.map"
   },
   "entrypoints": [
     "static/css/main.8476a900.css",
-    "static/js/main.566fabb2.js"
+    "static/js/main.20c4f2f5.js"
   ]
 }
